@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bouquet Customizer</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✨ Create Your Love Message ✨</h1>
+        </div>
+
+        <!-- Main App -->
+        <div class="app-content">
+
+            <!-- Canvas & Controls (Tabs on Mobile) -->
+            <div class="canvas-section">
+                <div class="canvas-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <p class="canvas-hint">💡 Tap & drag to reposition</p>
+            </div>
+
+            <!-- Tab Navigation (Mobile Only) -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="customize">
+                    <span class="tab-icon">🎨</span>
+                    <span class="tab-label">Customize</span>
+                </button>
+                <button class="tab-btn" data-tab="message">
+                    <span class="tab-icon">💬</span>
+                    <span class="tab-label">Message</span>
+                </button>
+                <button class="tab-btn" data-tab="download">
+                    <span class="tab-icon">💖</span>
+                    <span class="tab-label">Download</span>
+                </button>
+            </div>
+
+            <!-- Customize Tab -->
+            <div class="tab-content active" id="customize-tab">
+                <!-- Bouquets -->
+                <div class="section-card">
+                    <div class="section-title">🌹 Select Bouquet</div>
+                    <div class="selector-group">
+                        <button class="arrow-btn prev-btn" id="bouquet-prev">◀</button>
+                        <div class="preview-box bouquet-preview">
+                            <img id="bouquet-display" src="" alt="Bouquet">
+                        </div>
+                        <button class="arrow-btn next-btn" id="bouquet-next">▶</button>
+                    </div>
+                </div>
+
+                <!-- Characters -->
+                <div class="section-card">
+                    <div class="section-title">👤 Select Character</div>
+                    <div class="selector-group">
+                        <button class="arrow-btn prev-btn" id="character-prev">◀</button>
+                        <div class="preview-box character-preview">
+                            <img id="character-display" src="" alt="Character">
+                        </div>
+                        <button class="arrow-btn next-btn" id="character-next">▶</button>
+                    </div>
+                </div>
+
+                <!-- Background Color -->
+                <div class="section-card">
+                    <div class="section-title">🎨 Background Color</div>
+                    <div class="color-options">
+                        <button class="color-btn" data-color="#ffffff">
+                            <div class="color-swatch" style="background-color: #ffffff;"></div>
+                            <span>White</span>
+                        </button>
+                        <button class="color-btn" data-color="#ffe0e0">
+                            <div class="color-swatch" style="background-color: #ffe0e0;"></div>
+                            <span>Rose</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Tab -->
+            <div class="tab-content" id="message-tab">
+                <div class="section-card">
+                    <div class="section-title">✨ Font Style</div>
+                    <select id="font-style" class="style-select">
+                        <option value="elegant">✨ Elegant</option>
+                        <option value="playful">💕 Playful</option>
+                        <option value="romantic">💐 Romantic</option>
+                        <option value="bold">🔥 Bold</option>
+                    </select>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-title">💬 Your Message</div>
+                    <textarea id="message-text" placeholder="Write your love message..." maxlength="200"></textarea>
+                    <div class="char-counter"><span id="char-count">0</span>/200</div>
+                </div>
+            </div>
+
+            <!-- Download Tab -->
+            <div class="tab-content" id="download-tab">
+                <div class="download-section">
+                    <div class="download-icon">💖</div>
+                    <h2>Ready to Download?</h2>
+                    <p>Your beautiful bouquet is ready to share with your special someone!</p>
+                    <button id="download-btn" class="download-btn-large">
+                        Download Your Bouquet
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Made with 💕 for your loved ones</p>
+            <p><a href="https://instagram.com/aaliobeid" target="_blank" rel="noopener noreferrer">Follow @aaliobeid on
+                    Instagram</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
